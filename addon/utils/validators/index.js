@@ -9,6 +9,7 @@ import element from './element'
 import emberComponent from './ember-component'
 import emberObject from './ember-object'
 import func from './func'
+import iface from './iface'
 import instanceOf from './instance-of'
 import nullFn from './null'
 import number from './number'
@@ -41,6 +42,7 @@ const validators = {
 
 assign(validators, {
   arrayOf: arrayOf.bind(this, validators),
+  iface: iface.bind(this, validators),
   oneOfType: oneOfType.bind(this, validators),
   shape: shape.bind(this, validators)
 })
